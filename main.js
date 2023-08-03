@@ -12,31 +12,87 @@ toggleBtn.addEventListener('click', () => {
     icons.classList.toggle('active');
 });
 
-const slides = document.querySelector('.slides');
-const slideimg = document.querySelectorAll('.slides li');
-let currentldx = 0;
-const slideCount = slideimg.length;
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-const slideWidth = 600;
-const slideMargin = 100;
-
-slides.style.width = (slideWidth + slideMargin) * slideCount + 'px';
-
-function moveSlide(num) {
-    slides.style.left = -num * 600 + 'px';
-    currentldx = num;
+function toggleimg(){
+    const img = document.getElementsByClassName("side_item");
+    for (let i = 0; i < img.length; i++){
+        if (img[i].style.display === 'none'){
+            img[i].style.display = 'block';
+        } else{
+            img[i].style.display = 'none'
+        }
+    }
 }
 
-prev.addEventListener('click',function(){
-    if (currentldx !==0) moveSlide(currentldx -1);
-});
-
-next.addEventListener('click',function(){
-    if (currentldx !== slideCount -1){
-        moveSlide(currentldx + 1);
+function togglebeno(){
+    const img = document.getElementsByClassName("card");
+    for (let i = 0; i < img.length; i++){
+        if (img[i].style.display === 'none'){
+            img[i].style.display = 'flex';
+        } else{
+            img[i].style.display = 'none'
+        }
     }
-});
+}
+
+function asiyah() {
+    const img = [
+    document.getElementById("말쿠트"),
+    document.getElementById("에소드"),
+    document.getElementById("호드"),
+    document.getElementById("네짜흐")
+    ];
+
+    img.forEach(element => {
+    if (element instanceof Element) {
+        const computedStyle = window.getComputedStyle(element);
+        if (computedStyle.display === "none") {
+        element.style.display = "flex";
+        } else {
+        element.style.display = "none";
+        }
+    }
+    });
+}
+
+function Briah() {
+    const img = [
+    document.getElementById("티페리트"),
+    document.getElementById("게부라"),
+    document.getElementById("헤세드")
+    ];
+
+    img.forEach(element => {
+    if (element instanceof Element) {
+        const computedStyle = window.getComputedStyle(element);
+        if (computedStyle.display === "none") {
+        element.style.display = "flex";
+        } else {
+        element.style.display = "none";
+        }
+    }
+    });
+}
+
+function Atziluth() {
+    const img = [
+    document.getElementById("비나"),
+    document.getElementById("호크마")
+    ];
+
+    img.forEach(element => {
+    if (element instanceof Element) {
+        const computedStyle = window.getComputedStyle(element);
+        if (computedStyle.display === "none") {
+        element.style.display = "flex";
+        } else {
+        element.style.display = "none";
+        }
+    }
+    });
+}
+
+
+
 
 
 
