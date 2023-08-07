@@ -142,12 +142,10 @@ a{
     font-size: 20px;
     border: 20px;
     color: blue;
+    cursor: pointer;
 }
 
-.side>.side_card>.top>h3{
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
+
 
 .side_item{
     background: rgb(0,0,0);
@@ -401,6 +399,11 @@ background: linear-gradient(131deg, rgba(126,70,0,1) 0%, rgba(254,255,0,1) 100%)
     color: yellow;
 }
 
+.lobotomi{
+    border: white 2px solid;
+    margin: 0;
+    padding: 0;
+}
 
 .card_pack{
     position: relative;
@@ -412,6 +415,7 @@ background: linear-gradient(131deg, rgba(126,70,0,1) 0%, rgba(254,255,0,1) 100%)
 .card_pack>.cards{
     display: flex;
     justify-content: center;
+
     
 }
 
@@ -425,11 +429,12 @@ background: linear-gradient(131deg, rgba(126,70,0,1) 0%, rgba(254,255,0,1) 100%)
 .card_pack>.cards>.card>img{
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 .card_pack>.cards>.card:hover img{
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease;
     opacity: 0.9;
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .card_pack>.cards>.card>.말쿠트{
@@ -469,14 +474,21 @@ background: linear-gradient(131deg, rgba(126,70,0,1) 0%, rgba(254,255,0,1) 100%)
 
 .상층{
     color: rgb(271, 289, 115);
+    cursor: pointer;
 }
 
 .중층>h2{
     color: rgba(255, 178, 221, 0.692);
+    cursor: pointer;
 }
 
 .하층>h2{
     color:rgb(195, 191, 162);
+    cursor: pointer;
+}
+
+.세피라{
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

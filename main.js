@@ -91,7 +91,32 @@ function Atziluth() {
     });
 }
 
+const images = document.querySelectorAll('.card img');
 
+images.forEach(img => {
+    img.addEventListener('click' , function() {
+        const classname = img.className;
+        if (classname === '말쿠트') {
+            window.location.href = '말쿠트.html';
+        }else if(classname === '에소드') {
+            window.location.href = '에소드.html'
+        }else if(classname === '호드') {
+            window.location.href = '호드.html'
+        }else if(classname === '네짜흐') {
+            window.location.href = '네짜흐.html'
+        }else if(classname === '티페리트') {
+            window.location.href = '티페리트.html'
+        }else if(classname === '게부라') {
+            window.location.href = '게부라.html'
+        }else if(classname === '헤세드') {
+            window.location.href = '헤세드.html'
+        }else if(classname === '비나') {
+            window.location.href = '비나.html'
+        }else if(classname === '호크마') {
+            window.location.href = '호크마.html'
+        }
+    });
+});
 
 
 
