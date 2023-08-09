@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 300vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 30%, rgba(159,104,0,1) 76%, rgba(254,255,0,1) 100%);
+    background-attachment: fixed;
+}
+
+body{
+    position: relative;
+    text-align: center;
+}
+
+img{
+    float: left;
+    height: 400px;
+}
+
+
+
+p{
+    font-family: 'Nanum Myeongjo', serif;
+    color: white;
+    font-size: 19px;
+
+}
+
+.episode1{
+    margin-top: 10px;
+}
+
+.episode1>.Straight>.one{
+    font-size: 25px;
+    color: rgb(253, 0, 0);
+    margin-bottom: 2px;
+    text-shadow: 0 0 10px rgb(4, 0, 253),0 0 15px rgb(188, 187, 236);
+}
+
+.episode1>.Straight>.two{
+    color: blue;
+    font-size: 27px;
+    text-shadow: 0 0 10px rgb(54, 1, 1),0 0 15px red;
+}
+
+
+#title {
+    font-family: "Arial Black", sans-serif;
+    font-size: 40px;
+    color: #FFC107;
+    text-shadow: 0 0 7px white,0 0 15px #000000,0 0 20px #000000, 0 0 30px #000000 ; /* 텍스트 쉐도우 추가 */
+}
+
+
+/* :root {
+    --ti-cursor-margin-left: 0.1em;
+    --ti-cursor-color: white;
+} */
+
+[data-scroll] {
+    opacity: 0;
+    
+}
+[data-scroll="in"] {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+[data-scroll="out"] {
+    opacity: 0;
+}
