@@ -4,9 +4,11 @@
 }
 html{
     height: 300vh;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 30%, rgba(159,104,0,1) 76%, rgba(254,255,0,1) 100%);
+    background-image: url('https://i.namu.wiki/i/S85gqQ-reE_eln40FxZ83wtAzL5ZDf4Zd7oYxRHKN-WSsdi3rkba-giHULTjHkg6r0SNiJ9apTNWLFFMrhY-bQ.webp');
+    /* background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 30%, rgba(159,104,0,1) 85%, rgba(254,255,0,1) 100%); */
     background-attachment: fixed;
+    background-size: cover;
 }
 
 body{
@@ -15,7 +17,7 @@ body{
 }
 
 img{
-    float: left;
+    
     height: 400px;
 }
 
@@ -23,19 +25,23 @@ img{
 
 p{
     font-family: 'Nanum Myeongjo', serif;
-    color: white;
-    font-size: 19px;
+    color: rgb(230, 230, 230);
+    font-size: 21px;
+    text-shadow: 0 0 3px white;
 
+}
+
+.main{
+    margin-top: 20px;
 }
 
 .episode1{
     margin-top: 10px;
 }
 
-.episode1>.Straight>.one{
+.one{
     font-size: 25px;
     color: rgb(253, 0, 0);
-    margin-bottom: 2px;
     text-shadow: 0 0 10px rgb(4, 0, 253),0 0 15px rgb(188, 187, 236);
 }
 
@@ -43,8 +49,33 @@ p{
     color: blue;
     font-size: 27px;
     text-shadow: 0 0 10px rgb(54, 1, 1),0 0 15px red;
+    
 }
 
+.episode1>.Straight>.knock{
+    font-size: 30px;
+    color: rgb(255, 0, 0);
+    display: inline-block;
+    animation: knockSequence 2s linear 3;
+}
+
+@keyframes knockSequence {
+    0%, 100% {
+        transform: scale(1);
+    }
+    10%,20%,30%,40%,50%,60% {
+        transform: scale(1.1); /* 빠르게 커짐 */
+    }
+    15%,25%,35%,45%,55%,65% {
+        transform: scale(1);
+    }
+}
+
+.malkuth{
+    font-size: 24px;
+    color: #FFC107;
+    text-shadow: 0 0 7px white,0 0 15px #000000,0 0 20px #000000, 0 0 30px #000000 ;
+}
 
 #title {
     font-family: "Arial Black", sans-serif;
@@ -53,20 +84,15 @@ p{
     text-shadow: 0 0 7px white,0 0 15px #000000,0 0 20px #000000, 0 0 30px #000000 ; /* 텍스트 쉐도우 추가 */
 }
 
-
-/* :root {
-    --ti-cursor-margin-left: 0.1em;
-    --ti-cursor-color: white;
-} */
-
 [data-scroll] {
     opacity: 0;
     
 }
 [data-scroll="in"] {
     opacity: 1;
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 [data-scroll="out"] {
     opacity: 0;
 }
+
