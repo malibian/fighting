@@ -1,98 +1,355 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-html{
-    height: 300vh;
-    background-image: url('https://i.namu.wiki/i/S85gqQ-reE_eln40FxZ83wtAzL5ZDf4Zd7oYxRHKN-WSsdi3rkba-giHULTjHkg6r0SNiJ9apTNWLFFMrhY-bQ.webp');
-    /* background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 30%, rgba(159,104,0,1) 85%, rgba(254,255,0,1) 100%); */
-    background-attachment: fixed;
-    background-size: cover;
-}
+
 
 body{
+    background-color: black;
+    overflow: hidden;
+}
+p,h1{
+    color: white;
+}
+
+.book {
+    
+    width: calc(100% * var(--total-pages)); /* --total-pages는 전체 페이지 수를 나타내는 CSS 변수입니다. */
+    overflow: hidden;
+    transition: transform 1s ease-in-out;
     position: relative;
-    text-align: center;
-}
-
-img{
-    
-    height: 400px;
+    float: left;
 }
 
 
-
-p{
-    font-family: 'Nanum Myeongjo', serif;
-    color: rgb(230, 230, 230);
-    font-size: 21px;
-    text-shadow: 0 0 3px white;
-
+.page{
+    /* display: flex; */
+    width: 100vw;
+    float: left;
 }
 
-.main{
-    margin-top: 20px;
-}
-
-.episode1{
-    margin-top: 10px;
-}
-
-.one{
-    font-size: 25px;
-    color: rgb(253, 0, 0);
-    text-shadow: 0 0 10px rgb(4, 0, 253),0 0 15px rgb(188, 187, 236);
-}
-
-.episode1>.Straight>.two{
-    color: blue;
-    font-size: 27px;
-    text-shadow: 0 0 10px rgb(54, 1, 1),0 0 15px red;
-    
-}
-
-.episode1>.Straight>.knock{
-    font-size: 30px;
-    color: rgb(255, 0, 0);
-    display: inline-block;
-    animation: knockSequence 2s linear 3;
-}
-
-@keyframes knockSequence {
-    0%, 100% {
-        transform: scale(1);
-    }
-    10%,20%,30%,40%,50%,60% {
-        transform: scale(1.1); /* 빠르게 커짐 */
-    }
-    15%,25%,35%,45%,55%,65% {
-        transform: scale(1);
-    }
+.img>img{
+    width: 15%;
+    float: left;
 }
 
 .malkuth{
-    font-size: 24px;
-    color: #FFC107;
-    text-shadow: 0 0 7px white,0 0 15px #000000,0 0 20px #000000, 0 0 30px #000000 ;
+    font-size: 36px;
+    color: rgb(255, 217, 0);
+    text-shadow: 0 0 10px white;
 }
 
-#title {
-    font-family: "Arial Black", sans-serif;
-    font-size: 40px;
-    color: #FFC107;
-    text-shadow: 0 0 7px white,0 0 15px #000000,0 0 20px #000000, 0 0 30px #000000 ; /* 텍스트 쉐도우 추가 */
+.size{
+    font-size: 25px;
 }
 
-[data-scroll] {
-    opacity: 0;
+.befor{
+    float: left;
+    width: 10%;
+}
+
+.befor1{
+    width: 20%;
+    float: left;
+}
+
+.엘리야{
+    font-size: 22px;
+    color: rgb(0, 0, 187);
+
+}
+
+.befor2{
+    float: left;
+    width: 20%;
+}
+
+.pain{
+    font-size: 22px;
+    color: rgb(207, 2, 2);
+    text-shadow: 0 0 10px rgba(128, 0, 128, 0.753);
+}
+
+.btn1{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    opacity: 0.5;
+}
+
+.button:hover .btn1{
+    background-color: rgb(253, 255, 113);
+    scale: 1.2;
+    transition: all 0.5s ease-in-out;
     
 }
-[data-scroll="in"] {
-    opacity: 1;
-    transition: all 1s ease-in-out;
-}
-[data-scroll="out"] {
-    opacity: 0;
+
+.btn2{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    opacity: 0.5;
 }
 
+.button:hover .btn2{
+    background-color: rgb(253, 255, 113);
+    scale: 1.2;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.text-container {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100vw;
+    height: 35px;
+}
+
+.scrolling-text {
+    font-weight: 1000;
+    font-size: 16px;
+    color: red;
+    animation: scrollText 8.092307692307692s linear infinite;
+}
+
+.clipote_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.clipote_box>.clipa>span{
+    font-size: 23px;
+    font-weight: 900;
+}
+
+@keyframes scrollText {
+    0% {
+    transform: translateX(100%);
+    }
+    100% {
+    transform: translateX(-100%);
+    }
+}
+
+.text-container2 {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100vw;
+    height: 35px;
+}
+
+.scrolling-text2 {
+    font-weight: 1000;
+    font-size: 16px;
+    color: red;
+    animation: scrollText2 8.092307692307692s linear infinite; /* 새로운 애니메이션 이름 사용 */
+}
+
+@keyframes scrollText2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.말쿠트_폭주 {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* 화면 높이에 맞춰 이미지 세로 중앙 정렬 */
+    width: 100vw;
+    position: relative;
+}
+.말쿠트_폭주 img {
+    max-width: 100%;
+    max-height: 90%;
+    width: 40vw;
+    height: 60vh;
+    z-index: 0;
+    margin: 0 auto; /* 이미지를 가로 중앙에 정렬 */
+}
+
+.말쿠트_보스_대사>.span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10
+,.span11,.span12,.span13,.span14{
+    font-size: 18px;
+    font-weight: 550;
+    color: rgb(180, 174, 153);
+    text-shadow: 0 0 5px black;
+    text-shadow: 0 0 8px blue;
+    text-shadow: 0 0 10px rgba(245, 245, 2, 0.747);
+}
+
+.말쿠트_보스_대사>.span1{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+    transform: rotate(45deg);
+
+}
+
+
+.말쿠트_보스_대사>.span2{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    z-index: 1;
+    transform: rotate(320deg);
+
+}
+.말쿠트_보스_대사>.span3{
+    position: absolute;
+    top: 65%;
+    left: 70%;
+    z-index: 1;
+    transform: rotate(25deg);
+}
+.말쿠트_보스_대사>.span4{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    z-index: 1;
+    transform: rotate(330deg);
+}
+.말쿠트_보스_대사>.span5{
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    z-index: 1;
+    transform: rotate(20deg);
+}
+.말쿠트_보스_대사>.span6{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 1;
+    transform: rotate(295deg);
+}
+.말쿠트_보스_대사>.span7{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+    transform: rotate(325deg);
+}
+.말쿠트_보스_대사>.span8{
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    z-index: 1;
+    transform: rotate(35deg);
+}
+.말쿠트_보스_대사>.span9{
+    position: absolute;
+    top: 60%;
+    left: 12%;
+    z-index: 1;
+    transform: rotate(22deg);
+}
+.말쿠트_보스_대사>.span10{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+.말쿠트_보스_대사>.span11{
+    position: absolute;
+    top: 85%;
+    left: 70%;
+    z-index: 1;
+    transform: rotate(270deg);
+}
+.말쿠트_보스_대사>.span12{
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    z-index: 1;
+    transform: rotate(335deg);
+}
+.말쿠트_보스_대사>.span13{
+    position: absolute;
+    top: -30%;
+    left: 40%;
+    z-index: 1;
+}
+.말쿠트_보스_대사>.span14{
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    z-index: 1;
+    color: rgb(202, 202, 12);
+    text-shadow: 0 0 2px white, 0 0 9px white;
+}
+
+.malkuth_img{
+    float: left;
+}
+
+.독백{
+    font-size: 23px;
+    color: rgb(255, 238, 0);
+    text-shadow: 0 0 5px white;
+}
+
+.씨앗{
+    margin: 2px;
+    width: 60px;
+    height: 75px;
+    color: rgb(255, 255, 255);
+    padding: 0px 15px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50% 50% 50% /100% 100% 22% 22%;
+    background-color: transparent;
+    font-weight: bolder;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--animation-duration) ease-in-out; /* 애니메이션 속도 설정 */
+}
+
+
+.씨앗:focus{
+    outline: none;
+}
+
+.씨앗::before{
+    content: "";
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    top: 100%;
+    left: 0;
+    transition: all 1s ease-in-out;
+    z-index: 0;
+}
+
+.씨앗:hover::before{
+    transform: translateY(-100%);
+}
+
+.말쿠트_씨앗{
+    color: rgb(255, 250, 182);
+    text-shadow: 0 0 3px orange, 0 0 7px yellow, 0 0 10px white;
+}
